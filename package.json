@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "dotenv -e .env.development -- tsx --watch src/server.ts",
-    "migrate:dev": "dotenv -e .env.development -- npx prisma migrate dev"
+    "migrate:dev": "dotenv -e .env.development -- npx prisma migrate dev",
+    "seed:dev": "dotenv -e .env.development -- npx prisma db seed"
   },
   "keywords": [],
   "author": "",
@@ -21,5 +22,8 @@
     "prisma": "^4.9.0",
     "tsx": "^3.12.2",
     "typescript": "^4.9.4"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   }
 }
